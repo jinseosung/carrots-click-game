@@ -1,0 +1,124 @@
+:root {
+  --btn-width-height: 60px;
+  --border-radius: 20px;
+  --border-btn: 7px;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  text-align: center;
+  background-color: black;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 500px;
+  background-image: url("/img/background.png");
+  background-size: cover;
+  margin: auto;
+  border-radius: var(--border-radius);
+}
+
+.game__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.game__field {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+
+.game__btn {
+  width: var(--btn-width-height);
+  height: var(--btn-width-height);
+  border-radius: var(--border-btn);
+  font-size: 24px;
+  background-color: rgb(240, 215, 183);
+  border: 3px solid black;
+  transition: transform 300ms ease-in;
+}
+
+.game__btn:hover {
+  transform: scale(1.1);
+}
+
+.game__timer {
+  width: 100px;
+  background-color: white;
+  text-align: center;
+  border-radius: var(--border-radius);
+  border: 3px solid;
+  margin-top: 8px;
+  font-size: 32px;
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
+}
+
+.game__counter {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 36px;
+  background-color: palevioletred;
+  color: white;
+  border-radius: 50%;
+  border: 3px solid black;
+  margin-top: 8px;
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
+}
+
+.pop-up {
+  width: 400px;
+  height: 140px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  margin: auto;
+  transform: translateY(-150%);
+  border-radius: var(--border-radius);
+}
+
+.pop-up--hide {
+  display: none;
+}
+
+.pop-up__btn {
+  width: var(--btn-width-height);
+  height: var(--btn-width-height);
+  border-radius: var(--border-btn);
+  font-size: 24px;
+  background-color: rgb(240, 215, 183);
+  border: 3px solid black;
+  margin-bottom: 4px;
+}
+
+.pop-up__message {
+  display: block;
+  font-size: 38px;
+}
+
+.carrot,
+.bug {
+  transition: transform 100ms ease-in;
+}
+
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
+}
