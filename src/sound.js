@@ -25,7 +25,7 @@ export function playWin() {
 }
 
 export function stopBg() {
-  stopSound(stopBg);
+  stopSound(bgSound);
 }
 
 function playSound(sound) {
